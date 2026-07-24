@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Tell us what you need — medical billing, healthcare software, or both. Our team follows up within one business day.",
   alternates: { canonical: "/contact" },
   openGraph: og({
-    title: "Contact | theCareLineMD",
+    title: "Contact | CareLineMD",
     description: "Request a billing consultation or software demo. We follow up within one business day.",
     url: "/contact",
   }),

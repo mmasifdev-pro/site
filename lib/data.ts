@@ -1,4 +1,4 @@
-// Content model for theCareLineMD — ported verbatim from the original design source.
+// Content model for CareLineMD — ported verbatim from the original design source.
 // Do not paraphrase copy here; these strings are the site's marketing content.
 
 export interface Feature { title: string; desc: string }

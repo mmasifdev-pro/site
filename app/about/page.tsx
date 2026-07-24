@@ -6,10 +6,10 @@ import { Breadcrumb } from "@/components/ui";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "theCareLineMD is a technology and revenue-cycle partner for healthcare organizations, combining hands-on billing expertise with modern software.",
+    "CareLineMD is a technology and revenue-cycle partner for healthcare organizations, combining hands-on billing expertise with modern software.",
   alternates: { canonical: "/about" },
   openGraph: og({
-    title: "About | theCareLineMD",
+    title: "About | CareLineMD",
     description: "A technology and revenue-cycle partner for healthcare organizations.",
     url: "/about",
   }),

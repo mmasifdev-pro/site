@@ -21,7 +21,7 @@ export default function HomePage() {
               Get paid faster. Run your practice smarter.
             </h1>
             <p style={css("font-size:18px;line-height:1.6;color:#4C5C6C;max-width:520px;margin:0 0 34px;")}>
-              theCareLineMD helps healthcare organizations improve revenue and modernize operations with expert medical billing &amp; revenue cycle management, paired with an EHR, PMS, and patient portal built to work together.
+              CareLineMD helps healthcare organizations improve revenue and modernize operations with expert medical billing &amp; revenue cycle management, paired with an EHR, PMS, and patient portal built to work together.
             </p>
             <div style={css("display:flex;flex-wrap:wrap;gap:14px;margin-bottom:36px;")}>
               <Link href="/contact" className="clmd-cta-primary" style={css("background:#0EA5A6;border:none;color:#fff;font:inherit;font-weight:700;font-size:15px;padding:15px 26px;border-radius:9px;text-decoration:none;")}>
@@ -149,7 +149,7 @@ export default function HomePage() {
         <div style={css("max-width:1280px;margin:0 auto;")}>
           <h2 style={css("font-family:'Manrope',sans-serif;font-size:27px;font-weight:800;color:#0A1F44;margin:0 0 32px;text-align:center;")}>What our clients say</h2>
           <div className="clmd-3col" style={css("display:grid;grid-template-columns:repeat(3,1fr);gap:20px;")}>
-            <Testimonial quote={'"Switching our billing to theCareLineMD cut our denial rate almost in half within two quarters. Their team caught issues our old vendor never flagged."'} name="Dr. Meera Anand" role="Summit Primary Care" />
+            <Testimonial quote={'"Switching our billing to CareLineMD cut our denial rate almost in half within two quarters. Their team caught issues our old vendor never flagged."'} name="Dr. Meera Anand" role="Summit Primary Care" />
             <Testimonial quote={'"Having our PMS and billing team on the same platform removed the back-and-forth entirely. Scheduling, claims, and payments finally talk to each other."'} name="James Ortega" role="Practice Administrator, Bayview Ortho" />
             <Testimonial quote={'"Our patients actually use the portal — appointment requests and bill pay dropped our front-desk call volume noticeably."'} name="Priya Chandrasekaran" role="Office Manager, Cedar Behavioral Group" />
           </div>

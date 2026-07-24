@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "End-to-end medical billing and RCM services — eligibility verification, coding, claims processing, denial management, AR, and credentialing — run by a dedicated healthcare billing team.",
   alternates: { canonical: "/services" },
   openGraph: og({
-    title: "Medical Billing & Revenue Cycle Management Services | theCareLineMD",
+    title: "Medical Billing & Revenue Cycle Management Services | CareLineMD",
     description:
       "End-to-end billing support — from eligibility checks to appeals — so your team can focus on patients, not paperwork.",
     url: "/services",

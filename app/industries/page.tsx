@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Medical billing and healthcare software tuned to each specialty — primary care, cardiology, orthopedics, behavioral health, hospitals, radiology, dermatology, and more.",
   alternates: { canonical: "/industries" },
   openGraph: og({
-    title: "Industries — Specialty-Specific Medical Billing & Software | theCareLineMD",
+    title: "Industries — Specialty-Specific Medical Billing & Software | CareLineMD",
     description: "Every specialty has its own coding rules, payer quirks, and workflow. Here's how we adapt.",
     url: "/industries",
   }),

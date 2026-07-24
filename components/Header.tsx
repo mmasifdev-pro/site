@@ -54,7 +54,7 @@ export default function Header() {
             style={css("width:40px;height:40px;display:block;")}
           />
           <span style={css("font-family:'Manrope',sans-serif;font-weight:800;font-size:19px;letter-spacing:-0.02em;color:#0A1F44;")}>
-            theCareLineMD
+            CareLineMD
           </span>
         </Link>
 

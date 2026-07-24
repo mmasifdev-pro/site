@@ -28,7 +28,7 @@ export function Breadcrumb({ items, tone = "dark" }: { items: Crumb[]; tone?: "d
 export function UrlLine({ path }: { path: string }) {
   return (
     <div style={css("font-family:monospace;font-size:12.5px;color:#5E7999;margin-bottom:16px;")}>
-      thecarelinemd.com{path}
+      carelinemd.com{path}
     </div>
   );
 }

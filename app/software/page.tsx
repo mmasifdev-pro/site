@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Modern healthcare software built to work together: EHR, practice management system (PMS), patient portal, and healthcare CRM. Run one, or run them all alongside our billing team.",
   alternates: { canonical: "/software" },
   openGraph: og({
-    title: "Healthcare Software — EHR, PMS, Patient Portal & CRM | theCareLineMD",
+    title: "Healthcare Software — EHR, PMS, Patient Portal & CRM | CareLineMD",
     description: "EHR, PMS, patient portal, and CRM — run one, or run them all alongside our billing team.",
     url: "/software",
   }),

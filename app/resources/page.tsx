@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Guides, glossary, and research on medical billing, revenue cycle management, and healthcare software — practical references for practice staff.",
   alternates: { canonical: "/resources" },
   openGraph: og({
-    title: "Resources — Billing & Healthcare Software Guides | theCareLineMD",
+    title: "Resources — Billing & Healthcare Software Guides | CareLineMD",
     description: "Guides, glossary & research on billing and healthcare software.",
     url: "/resources",
   }),

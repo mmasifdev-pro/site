@@ -16,7 +16,7 @@ export default function Footer() {
               <div style={css("width:28px;height:28px;border-radius:7px;background:#0EA5A6;display:flex;align-items:center;justify-content:center;")}>
                 <div style={css("width:10px;height:10px;border-radius:3px;background:#0A1F44;")} />
               </div>
-              <span style={css("font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;color:#fff;")}>theCareLineMD</span>
+              <span style={css("font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;color:#fff;")}>CareLineMD</span>
             </div>
             <p style={css("font-size:13.5px;color:#7C8CA0;line-height:1.6;max-width:260px;margin:0;")}>
               Medical billing, revenue cycle management, and healthcare software for modern practices.
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         <div style={css("border-top:1px solid #17284A;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;")}>
-          <div style={css("font-size:12.5px;color:#5A6C85;")}>© 2026 theCareLineMD. All rights reserved.</div>
+          <div style={css("font-size:12.5px;color:#5A6C85;")}>© 2026 CareLineMD. All rights reserved.</div>
           <div style={css("display:flex;gap:20px;font-size:12.5px;color:#5A6C85;")}>
             <span>Privacy Policy</span>
             <span>Terms of Service</span>
