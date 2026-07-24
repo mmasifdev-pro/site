@@ -4,6 +4,8 @@ import { SERVICES, SOFTWARE, INDUSTRIES, RESOURCES } from "@/lib/data";
 import { contactHref } from "@/lib/site";
 import HomeDashboard from "@/components/HomeDashboard";
 
+export const dynamic = "force-static";
+
 export default function HomePage() {
   const servicesHome = SERVICES.slice(0, 8);
   const resourcesHome = RESOURCES.slice(0, 3);
@@ -88,33 +90,23 @@ export default function HomePage() {
           <SectionHead title="Healthcare software built to work together" href="/software" linkLabel="View all software →" />
           <div className="clmd-3col" style={css("display:grid;grid-template-columns:repeat(4,1fr);gap:18px;")}>
             <SoftwareCard slug="ehr" title="EHR" subtitle="Electronic Health Records">
-              <div style={css("background:#0A1F44;padding:14px;height:96px;display:flex;flex-direction:column;gap:5px;")}>
-                <div style={css("height:8px;width:60%;background:#2B4B78;border-radius:3px;")} />
-                <div style={css("height:8px;width:80%;background:#2B4B78;border-radius:3px;")} />
-                <div style={css("height:8px;width:40%;background:#0EA5A6;border-radius:3px;")} />
+              <div style={css("background:#0A1F44;padding:14px;height:96px;display:flex;align-items:center;justify-content:center;")}>
+                <img src="/ehr-logo.svg" alt="EHR logo" style={css("width:72px;height:72px;display:block;")} />
               </div>
             </SoftwareCard>
             <SoftwareCard slug="pms" title="PMS" subtitle="Practice Management System">
-              <div style={css("background:#F6F8FA;padding:14px;height:96px;display:grid;grid-template-columns:repeat(5,1fr);gap:3px;")}>
-                {["#0EA5A6", "#E2E8ED", "#0A1F44", "#E2E8ED", "#E7A64C", "#E2E8ED", "#0A1F44", "#E2E8ED", "#0EA5A6", "#E2E8ED"].map((c, i) => (
-                  <div key={i} style={css(`background:${c};border-radius:2px;`)} />
-                ))}
+              <div style={css("background:#F6F8FA;padding:14px;height:96px;display:flex;align-items:center;justify-content:center;")}>
+                <img src="/pms-logo.svg" alt="PMS logo" style={css("width:72px;height:72px;display:block;")} />
               </div>
             </SoftwareCard>
             <SoftwareCard slug="patient-portal" title="Patient Portal" subtitle="Self-service for patients">
-              <div style={css("background:#F6F8FA;padding:14px;height:96px;display:flex;justify-content:center;")}>
-                <div style={css("width:52px;background:#0A1F44;border-radius:8px;padding:6px 5px;display:flex;flex-direction:column;gap:4px;")}>
-                  <div style={css("height:6px;background:#0EA5A6;border-radius:2px;")} />
-                  <div style={css("height:14px;background:#2B4B78;border-radius:2px;")} />
-                  <div style={css("height:14px;background:#2B4B78;border-radius:2px;")} />
-                </div>
+              <div style={css("background:#F6F8FA;padding:14px;height:96px;display:flex;align-items:center;justify-content:center;")}>
+                <img src="/patient-portal-logo.svg" alt="Patient portal logo" style={css("width:72px;height:72px;display:block;")} />
               </div>
             </SoftwareCard>
             <SoftwareCard slug="healthcare-crm" title="Healthcare CRM" subtitle="Referrals & patient acquisition">
-              <div style={css("background:#F6F8FA;padding:14px;height:96px;display:flex;gap:5px;")}>
-                <div style={css("flex:1;background:#fff;border:1px solid #E2E8ED;border-radius:5px;")} />
-                <div style={css("flex:1;background:#fff;border:1px solid #E2E8ED;border-radius:5px;")} />
-                <div style={css("flex:1;background:#EAF6F5;border:1px solid #0EA5A6;border-radius:5px;")} />
+              <div style={css("background:#F6F8FA;padding:14px;height:96px;display:flex;align-items:center;justify-content:center;")}>
+                <img src="/healthcare-crm-logo.svg" alt="Healthcare CRM logo" style={css("width:72px;height:72px;display:block;")} />
               </div>
             </SoftwareCard>
           </div>

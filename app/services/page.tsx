@@ -5,6 +5,8 @@ import { SERVICES } from "@/lib/data";
 import { og } from "@/lib/site";
 import { Breadcrumb } from "@/components/ui";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "Medical Billing & Revenue Cycle Management Services",
   description:

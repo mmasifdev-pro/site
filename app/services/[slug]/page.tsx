@@ -5,6 +5,9 @@ import { SERVICES } from "@/lib/data";
 import { findService, absUrl, contactHref, og } from "@/lib/site";
 import { Breadcrumb, FeatureGrid, FaqList, RelatedPills, H2, HeroButtons } from "@/components/ui";
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
 }

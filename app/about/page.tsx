@@ -3,6 +3,8 @@ import { css } from "@/lib/css";
 import { og } from "@/lib/site";
 import { Breadcrumb } from "@/components/ui";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "About",
   description:

@@ -5,6 +5,8 @@ import { RESOURCES } from "@/lib/data";
 import { og } from "@/lib/site";
 import { Breadcrumb } from "@/components/ui";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "Resources — Billing & Healthcare Software Guides",
   description:

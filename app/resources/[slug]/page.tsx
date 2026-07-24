@@ -5,6 +5,9 @@ import { RESOURCES } from "@/lib/data";
 import { findArticle, relatedServices, relatedSoftware, absUrl, og } from "@/lib/site";
 import { Breadcrumb, RelatedPills } from "@/components/ui";
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return RESOURCES.map((s) => ({ slug: s.slug }));
 }

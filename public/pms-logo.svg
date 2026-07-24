@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="PMS logo">
+  <rect width="120" height="120" rx="26" fill="#F6F8FA"/>
+  <rect x="27" y="24" width="66" height="72" rx="14" fill="#FFFFFF" stroke="#D7DEE5" stroke-width="3"/>
+  <rect x="37" y="36" width="46" height="10" rx="5" fill="#0A1F44"/>
+  <rect x="37" y="54" width="30" height="8" rx="4" fill="#0EA5A6"/>
+  <rect x="37" y="70" width="38" height="8" rx="4" fill="#3FC7D4"/>
+  <path d="M79 38l8 8-12 12-6-6z" fill="#0EA5A6"/>
+</svg>

@@ -6,6 +6,9 @@ import { INDUSTRIES } from "@/lib/data";
 import { findIndustry, relatedServices, contactHref, og } from "@/lib/site";
 import { Breadcrumb, RelatedPills } from "@/components/ui";
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return INDUSTRIES.map((s) => ({ slug: s.slug }));
 }

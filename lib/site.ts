@@ -2,18 +2,18 @@ import { SERVICES, SOFTWARE, INDUSTRIES, RESOURCES } from "./data";
 
 /**
  * Central site + SEO configuration. Override the public URL at build time with
- * NEXT_PUBLIC_SITE_URL (e.g. https://www.carelinemd.com) so canonical URLs,
+ * NEXT_PUBLIC_SITE_URL (e.g. https://www.thecarelinemd.com) so canonical URLs,
  * the sitemap, and Open Graph tags all point at the real domain.
  */
 export const SITE = {
   name: "CareLineMD",
   shortName: "CareLineMD",
-  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.carelinemd.com").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.thecarelinemd.com").replace(/\/$/, ""),
   description:
     "CareLineMD helps healthcare organizations get paid faster and run smarter with expert medical billing, revenue cycle management, and an EHR, PMS, and patient portal built to work together.",
   tagline: "Medical Billing, RCM & Healthcare Software",
   phone: "(800) 555-0182",
-  email: "hello@carelinemd.com",
+  email: "hello@thecarelinemd.com",
   locale: "en_US",
 };
 

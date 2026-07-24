@@ -3,6 +3,8 @@ import { Suspense } from "react";
 import { og } from "@/lib/site";
 import ContactForm from "@/components/ContactForm";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "Contact — Request a Consultation or Demo",
   description:

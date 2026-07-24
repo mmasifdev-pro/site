@@ -13,9 +13,7 @@ export default function Footer() {
         <div className="clmd-footer-cols" style={css("display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:32px;margin-bottom:48px;")}>
           <div>
             <div style={css("display:flex;align-items:center;gap:9px;margin-bottom:14px;")}>
-              <div style={css("width:28px;height:28px;border-radius:7px;background:#0EA5A6;display:flex;align-items:center;justify-content:center;")}>
-                <div style={css("width:10px;height:10px;border-radius:3px;background:#0A1F44;")} />
-              </div>
+              <img src="/logo.svg" alt="CareLineMD logo" style={css("width:32px;height:32px;display:block;")} />
               <span style={css("font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;color:#fff;")}>CareLineMD</span>
             </div>
             <p style={css("font-size:13.5px;color:#7C8CA0;line-height:1.6;max-width:260px;margin:0;")}>

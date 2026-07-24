@@ -6,6 +6,9 @@ import { findSoftware, absUrl, contactHref, og } from "@/lib/site";
 import { Breadcrumb, FaqList, RelatedPills, H2, HeroButtons } from "@/components/ui";
 import { SoftwareMockup } from "@/components/Mockups";
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return SOFTWARE.map((s) => ({ slug: s.slug }));
 }

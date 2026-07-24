@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Patient portal logo">
+  <rect width="120" height="120" rx="26" fill="#F6F8FA"/>
+  <circle cx="60" cy="48" r="18" fill="#0A1F44"/>
+  <path d="M34 88c5-16 18-24 26-24s21 8 26 24" fill="#0EA5A6"/>
+  <rect x="36" y="34" width="48" height="24" rx="12" fill="#FFFFFF" stroke="#D7DEE5" stroke-width="3"/>
+  <path d="M42 44h36" stroke="#3FC7D4" stroke-width="6" stroke-linecap="round"/>
+</svg>

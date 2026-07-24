@@ -5,6 +5,8 @@ import { SOFTWARE } from "@/lib/data";
 import { og } from "@/lib/site";
 import { Breadcrumb } from "@/components/ui";
 
+export const dynamic = "force-static";
+
 export const metadata: Metadata = {
   title: "Healthcare Software — EHR, PMS, Patient Portal & CRM",
   description:

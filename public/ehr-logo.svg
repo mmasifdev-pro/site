@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="EHR logo">
+  <rect width="120" height="120" rx="26" fill="#0A1F44"/>
+  <rect x="28" y="24" width="64" height="72" rx="10" fill="#FFFFFF"/>
+  <rect x="41" y="39" width="38" height="8" rx="4" fill="#0EA5A6"/>
+  <rect x="41" y="54" width="26" height="8" rx="4" fill="#2B4B78"/>
+  <rect x="41" y="69" width="32" height="8" rx="4" fill="#3FC7D4"/>
+  <path d="M75 36h8v8h8v8h-8v8h-8v-8h-8v-8h8z" fill="#0EA5A6"/>
+</svg>

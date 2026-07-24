@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Healthcare CRM logo">
+  <rect width="120" height="120" rx="26" fill="#0A1F44"/>
+  <circle cx="40" cy="58" r="12" fill="#3FC7D4"/>
+  <circle cx="60" cy="40" r="12" fill="#FFFFFF"/>
+  <circle cx="80" cy="58" r="12" fill="#0EA5A6"/>
+  <path d="M48 56l10-10 8 8 12-14" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

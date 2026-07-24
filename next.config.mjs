@@ -1,15 +1,20 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  experimental: {
-    optimizePackageImports: ["next/link"],
-  },
-  // The site is fully static content, so every route is prerendered (SSG) at
-  // build time. Deploy to Vercel/Node directly, or add `output: 'export'` here
-  // to emit a pure-static bundle for any static host (see README).
-  output: "standalone",
+  output: "export",
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   compress: true,
+  images: {
+    unoptimized: true,
+  },
+  outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;
