@@ -1,0 +1,19 @@
+   ▲ Next.js 15.5.21
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 2.4s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./lib/db.ts:3:22
+Type error: Could not find a declaration file for module 'better-sqlite3'. 'D:/Claude/theCareLineMD-nextjs/site/node_modules/better-sqlite3/lib/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/better-sqlite3` if it exists or add a new declaration (.d.ts) file containing `declare module 'better-sqlite3';`
+
+[0m [90m 1 |[39m [36mimport[39m fs [36mfrom[39m [32m"fs"[39m[33m;[39m
+ [90m 2 |[39m [36mimport[39m path [36mfrom[39m [32m"path"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m [33mDatabase[39m [36mfrom[39m [32m"better-sqlite3"[39m[33m;[39m
+ [90m   |[39m                      [31m[1m^[22m[39m
+ [90m 4 |[39m
+ [90m 5 |[39m [36mconst[39m dbPath [33m=[39m path[33m.[39mjoin(process[33m.[39mcwd()[33m,[39m [32m"data"[39m[33m,[39m [32m"contact.db"[39m)[33m;[39m
+ [90m 6 |[39m [36mlet[39m db[33m:[39m [33mDatabase[39m[33m.[39m[33mDatabase[39m [33m|[39m [36mnull[39m [33m=[39m [36mnull[39m[33m;[39m[0m
+Next.js build worker exited with code: 1 and signal: null
