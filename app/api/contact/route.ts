@@ -20,7 +20,13 @@ export async function POST(request: Request) {
       `INSERT INTO submissions (created_at, name, email, organization, message, need)
        VALUES (?, ?, ?, ?, ?, ?)`
     );
-    stmt.run(new Date().toISOString(), name, email, organization, message, need);
+    const result = stmt.run(new Date().toISOString(), name, email, organization, message, need);
+    console.log("Contact submission stored", {
+      id: result.lastInsertRowid,
+      name,
+      email,
+      need,
+    });
 
     try {
       await sendSupportEmail({ name, email, organization, message, need });
@@ -28,7 +34,7 @@ export async function POST(request: Request) {
       console.error("Contact email error:", emailError);
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, id: Number(result.lastInsertRowid) });
   } catch (error) {
     console.error("Contact submission error:", error);
     return NextResponse.json({ error: "Unable to process your request right now." }, { status: 500 });
