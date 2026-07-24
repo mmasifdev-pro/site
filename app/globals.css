@@ -1,0 +1,77 @@
+/* Base reset + responsive rules, ported from the original design's <helmet>.
+   Class names (clmd-*) are preserved so the responsive behavior is identical. */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f6f8fa;
+  color: #16232f;
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: #0ea5a6;
+  text-decoration: none;
+}
+a:hover {
+  color: #0b8482;
+}
+
+/* Reusable nav-item hover (replaces the design's inline style-hover). */
+.clmd-navitem:hover {
+  background: #f6f8fa;
+}
+.clmd-menuitem:hover {
+  background: #f6f8fa;
+}
+.clmd-card-hover:hover {
+  border-color: #0ea5a6 !important;
+}
+.clmd-card-hover-soft:hover {
+  border-color: #0ea5a6 !important;
+  background: #fbfefe !important;
+}
+.clmd-pill:hover {
+  border-color: #0ea5a6 !important;
+  color: #0b8482 !important;
+}
+.clmd-footer-link:hover {
+  color: #ffffff !important;
+}
+.clmd-cta-primary:hover {
+  background: #0b8482 !important;
+}
+
+@media (max-width: 960px) {
+  .clmd-desktop-nav,
+  .clmd-desktop-cta {
+    display: none !important;
+  }
+  .clmd-hamburger {
+    display: flex !important;
+  }
+  .clmd-hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .clmd-hero-mock {
+    display: none !important;
+  }
+  .clmd-3col {
+    grid-template-columns: 1fr !important;
+  }
+  .clmd-4col {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .clmd-footer-cols {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
