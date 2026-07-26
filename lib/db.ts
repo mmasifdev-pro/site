@@ -1,37 +1,70 @@
-import fs from "fs";
-import path from "path";
-import Database from "better-sqlite3";
+import postgres from "postgres";
 
-const dbPath = path.join(process.cwd(), "data", "contact.db");
-let db: Database | null = null;
+// Reuse a single connection across invocations where possible (serverless-friendly).
+// `postgres` handles pooling/connection reuse internally.
+declare global {
+  // eslint-disable-next-line no-var
+  var __pgSql: ReturnType<typeof postgres> | undefined;
+}
 
 function ensureDb() {
-  if (db) {
-    return db;
+  if (global.__pgSql) {
+    return global.__pgSql;
   }
 
-  const dataDir = path.dirname(dbPath);
-  if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true });
+  const connectionString = process.env.DATABASE_URL;
+  if (!connectionString) {
+    throw new Error("DATABASE_URL environment variable is not set");
   }
 
-  db = new Database(dbPath, { fileMustExist: false });
-  db.pragma("journal_mode = WAL");
-  db.exec(
-    `CREATE TABLE IF NOT EXISTS submissions (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      created_at TEXT NOT NULL,
+  const sql = postgres(connectionString, {
+    // Most hosted Postgres (Neon, Supabase, RDS, etc.) require SSL.
+    ssl: "require",
+    max: 1, // safe default for serverless — avoid exhausting connection limits
+  });
+
+  global.__pgSql = sql;
+  return sql;
+}
+
+export function getDb() {
+  return ensureDb();
+}
+
+// Run once at startup / first call to make sure the table exists.
+// Safe to call repeatedly — CREATE TABLE IF NOT EXISTS is idempotent.
+export async function ensureSchema() {
+  const sql = getDb();
+  await sql`
+    CREATE TABLE IF NOT EXISTS submissions (
+      id SERIAL PRIMARY KEY,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
       name TEXT NOT NULL,
       email TEXT NOT NULL,
       organization TEXT,
       message TEXT NOT NULL,
       need TEXT NOT NULL
-    );`
-  );
-
-  return db;
+    );
+  `;
 }
 
-export function getDb() {
-  return ensureDb();
+export type NewSubmission = {
+  name: string;
+  email: string;
+  organization?: string | null;
+  message: string;
+  need: string;
+};
+
+export async function insertSubmission(data: NewSubmission) {
+  const sql = getDb();
+  await ensureSchema();
+
+  const [row] = await sql`
+    INSERT INTO submissions (name, email, organization, message, need)
+    VALUES (${data.name}, ${data.email}, ${data.organization ?? null}, ${data.message}, ${data.need})
+    RETURNING id, created_at;
+  `;
+
+  return row;
 }

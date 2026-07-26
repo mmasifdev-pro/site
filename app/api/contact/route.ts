@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getDb } from "@/lib/db";
+import { insertSubmission } from "@/lib/db";
 import { sendSupportEmail } from "@/lib/email";
 
 export async function POST(request: Request) {
@@ -15,14 +15,10 @@ export async function POST(request: Request) {
   }
 
   try {
-    const db = getDb();
-    const stmt = db.prepare(
-      `INSERT INTO submissions (created_at, name, email, organization, message, need)
-       VALUES (?, ?, ?, ?, ?, ?)`
-    );
-    const result = stmt.run(new Date().toISOString(), name, email, organization, message, need);
+    const row = await insertSubmission({ name, email, organization, message, need });
+
     console.log("Contact submission stored", {
-      id: result.lastInsertRowid,
+      id: row.id,
       name,
       email,
       need,
@@ -34,7 +30,7 @@ export async function POST(request: Request) {
       console.error("Contact email error:", emailError);
     }
 
-    return NextResponse.json({ ok: true, id: Number(result.lastInsertRowid) });
+    return NextResponse.json({ ok: true, id: row.id });
   } catch (error) {
     console.error("Contact submission error:", error);
     return NextResponse.json({ error: "Unable to process your request right now." }, { status: 500 });
