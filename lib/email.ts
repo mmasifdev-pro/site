@@ -42,8 +42,11 @@ export async function sendSupportEmail(payload: {
   `;
 
   await transporter.sendMail({
-    from: `${payload.name} <${payload.email}>`,
-    to: "support@skyup.ai",
+    // Must match the authenticated SMTP account or Gmail will flag/drop the message.
+    from: `theCareLineMD Website <${smtpUser}>`,
+    // Clicking "Reply" in the inbox will go straight to the visitor.
+    replyTo: `${payload.name} <${payload.email}>`,
+    to: "thecarelinemd@gmail.com",
     subject: `New contact request from ${payload.name}`,
     text: `Name: ${payload.name}\nEmail: ${payload.email}\nOrganization: ${payload.organization || "(none)"}\nNeed: ${payload.need}\nMessage:\n${payload.message}`,
     html,
